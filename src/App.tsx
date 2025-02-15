@@ -11,7 +11,7 @@ const App: React.FC = () =>
 {
     return (
         <div className={styles.app}>
-            <img src="/coffee-plant.jpg" alt="Mata de café" className={styles.banner} />
+            <img src="coffee-plant.jpg" alt="Mata de café" className={styles.banner} />
             <NavBar />
             <Home />
             <About />
