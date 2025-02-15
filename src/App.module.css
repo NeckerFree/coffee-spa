@@ -1,0 +1,12 @@
+ .app {
+     text-align: center;
+     background-color: var(--color-crema);
+     min-height: 100vh;
+     padding: 1rem;
+ }
+
+ .banner {
+     width: 100%;
+     max-height: 300px;
+     object-fit: cover;
+ }

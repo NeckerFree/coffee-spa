@@ -1,0 +1,16 @@
+ :root {
+     --color-beige: #f5f5dc;
+     --color-crema: #fffdd0;
+     --color-frambuesa: #c72c48;
+     --color-lila-suave: #c8a2c8;
+     --color-marron: #6f4e37;
+     --color-verde: #2e8b57;
+     --color-rosa: #ffc0cb;
+     --color-rosa-beige: #d8a59f;
+     --color-rosa-marron: #a87c6f;
+ }
+
+ body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+ }
