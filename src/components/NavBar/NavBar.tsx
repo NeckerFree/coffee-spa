@@ -14,7 +14,7 @@ const NavBar: React.FC = () =>
     };
 
     return (
-        <nav className={styles.navbar}>
+        <nav id="navbar" className={styles.navbar}>
             <ul>
                 <li><a href="#home" onClick={(e) => handleClick(e, 'home')}>Inicio</a></li>
                 <li><a href="#about" onClick={(e) => handleClick(e, 'about')}>Sobre Nosotros</a></li>
