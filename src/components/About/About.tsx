@@ -1,15 +1,13 @@
 
 import React from 'react';
 import styles from './About.module.css';
-
+import LoremIpsum from 'react-lorem-ipsum'
 const About: React.FC = () =>
 {
     return (
         <section id="about" className={styles.about}>
             <h2>Sobre Nosotros</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <LoremIpsum p={3} />
         </section>
     );
 };

@@ -1,26 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styles from './NavBar.module.css';
-
 const NavBar: React.FC = () =>
 {
-    const handleClick = (e: React.MouseEvent, id: string) =>
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () =>
     {
-        e.preventDefault();
-        const element = document.getElementById(id);
-        if (element)
-        {
-            element.scrollIntoView({ behavior: 'smooth' });
-        }
+        setIsOpen(!isOpen);
     };
 
     return (
-        <nav id="navbar" className={styles.navbar}>
-            <ul>
-                <li><a href="#home" onClick={(e) => handleClick(e, 'home')}>Inicio</a></li>
-                <li><a href="#about" onClick={(e) => handleClick(e, 'about')}>Sobre Nosotros</a></li>
-                <li><a href="#services" onClick={(e) => handleClick(e, 'services')}>Servicios</a></li>
-                <li><a href="#products" onClick={(e) => handleClick(e, 'products')}>Productos</a></li>
-                <li><a href="#contact" onClick={(e) => handleClick(e, 'contact')}>Contacto</a></li>
+        <nav className={styles.navbar} id="navbar">
+            <div className={styles.navbarBrand}>
+                <button onClick={toggleMenu} className={styles.navbarToggle}>
+                    ☰
+                </button>
+            </div>
+            <ul className={`${styles.navbarLinks} ${isOpen ? styles.navbarLinksActive : ''}`}>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/services">Services</Link></li>
+                <li><Link to="/products">Products</Link></li>
+                <li><Link to="/contact">Contact</Link></li>
             </ul>
         </nav>
     );
