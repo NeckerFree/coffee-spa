@@ -1,29 +1,48 @@
- .navbar {
-     background-color: var(--color-marron);
-     padding: 1rem;
- }
+.navbar {
+    position: fixed;
+    /* Fija la barra en la parte superior */
+    top: 0;
+    /* La coloca en la parte superior */
+    left: 0;
+    /* La coloca en el borde izquierdo */
+    width: 100%;
+    /* Ocupa todo el ancho de la pantalla */
+    z-index: 1000;
+    /* Asegura que esté por encima de otros elementos */
+    background-color: var(--color-marron);
+    /* Color de fondo */
+    padding: 1rem;
+    /* Espaciado interno */
+}
 
- .navbar ul {
-     list-style: none;
-     display: flex;
-     justify-content: space-around;
-     margin: 0;
-     padding: 0;
- }
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
 
- .navbar a {
-     color: var(--color-crema);
-     text-decoration: none;
-     font-weight: bold;
- }
+.navbar a {
+    color: var(--color-crema);
+    text-decoration: none;
+    font-weight: bold;
+}
 
- .navbar a:hover {
-     color: var(--color-frambuesa);
- }
+.navbar a:hover {
+    color: var(--color-frambuesa);
+}
 
- @media (max-width: 768px) {
-     .navbar ul {
-         flex-direction: column;
-         align-items: center;
-     }
- }
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem;
+        /* Reduce el espaciado en dispositivos móviles */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        /* Cambia la dirección del menú a vertical */
+        align-items: center;
+        /* Centra los elementos del menú */
+    }
+}
