@@ -1,15 +1,14 @@
 
 import React from 'react';
 import styles from './Products.module.css';
+import LoremIpsum from 'react-lorem-ipsum';
 
 const Products: React.FC = () =>
 {
     return (
         <section id="products" className={styles.products}>
             <h2>Productos</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <LoremIpsum p={6} />
         </section>
     );
 };

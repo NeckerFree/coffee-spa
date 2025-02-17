@@ -1,17 +1,17 @@
 
 import React from 'react';
-import styles from './About.module.css';
+import styles from './Frame/Frame.module.css';
 
-const About: React.FC = () =>
+const Frame: React.FC = () =>
 {
     return (
-        <section id="about" className={styles.about}>
-            <h2>Sobre Nosotros</h2>
+        <div className={styles.frame}>
+            <h2>Bienvenido a nuestra plantación de café</h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-        </section>
+        </div>
     );
 };
 
-export default About;
+export default Frame;
