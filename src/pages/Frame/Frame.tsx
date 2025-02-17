@@ -1,6 +1,6 @@
 
 import React from 'react';
-import styles from './Frame.module.css';
+import styles from './Frame/Frame.module.css';
 
 const Frame: React.FC = () =>
 {
