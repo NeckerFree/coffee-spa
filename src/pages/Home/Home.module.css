@@ -1,6 +1,7 @@
  .home {
      padding: 2rem;
      background-color: var(--color-rosa-marron);
+     margin: 1rem 0;
  }
 
  .banner {
