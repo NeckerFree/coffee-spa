@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './NavBar.module.css';
+
 const NavBar: React.FC = () =>
 {
     const [isOpen, setIsOpen] = useState(false);
@@ -8,6 +9,11 @@ const NavBar: React.FC = () =>
     const toggleMenu = () =>
     {
         setIsOpen(!isOpen);
+    };
+
+    const closeMenu = () =>
+    {
+        setIsOpen(false);
     };
 
     return (
@@ -18,11 +24,11 @@ const NavBar: React.FC = () =>
                 </button>
             </div>
             <ul className={`${styles.navbarLinks} ${isOpen ? styles.navbarLinksActive : ''}`}>
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to="/services">Services</Link></li>
-                <li><Link to="/products">Products</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
+                <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+                <li><Link to="/about" onClick={closeMenu}>About</Link></li>
+                <li><Link to="/services" onClick={closeMenu}>Services</Link></li>
+                <li><Link to="/products" onClick={closeMenu}>Products</Link></li>
+                <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
             </ul>
         </nav>
     );
